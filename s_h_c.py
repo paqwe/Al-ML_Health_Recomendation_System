@@ -22,7 +22,6 @@ def post_string():
         return jsonify({'error': str(e)}), 500
 
 
-desc_from_patient = "Doctor, I have  been feeling extremely tired all the time, even after resting.My body feels weak, and I sometimes struggle to do simple tasks."
 def get_symptom_words(desc_from_patient):
 
     #split text into sentences
@@ -43,7 +42,7 @@ def get_symptom_words(desc_from_patient):
     #Reduce words to their root form
     lemmatized = [WordNetLemmatizer().lemmatize(w) for w in words]
 
-    return desc_from_patient
+    
 
 
 
